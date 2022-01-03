@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+        <title>Forelesning 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+        <link rel="stylesheet" href="css/custom.css">
+
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+                <section>
+                    <h3>Fortsettelse kapittel 1</h3>
+                    <h4>Skalar og vektorfelt</h4>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Skalarprodukt</h3>
+                        <p>Skalarproduktet (prikk-produkt, dot product) mellom to vektorer gir en skalar</p>
+                        $
+                        \begin{align*}
+                        \vec{u} \cdot \vec{v} &= u_x v_x + u_y v_y + u_z v_z \\
+                        \begin{pmatrix}{\red{u_x} \\ \green{u_y} \\ \blue{u_z}}\end{pmatrix} \cdot \begin{pmatrix}{\red{v_x} \\ \green{v_y} \\ \blue{v_z}}\end{pmatrix} &= \red{u_x v_x} + \green{u_y v_y} + \blue{u_z v_z}  \\
+                        \end{align*}
+                        $
+                    </section>
+                    <section>
+                        <h3>Rigorøst skalarprodukt</h3>
+                        $\vec{u} \cdot \vec{v} = (\red{u_x \mathbf{i}} + \green{u_y \mathbf{j}} +\blue{u_z \mathbf{k}}) \cdot (\red{v_x \mathbf{i}} + \green{v_y \mathbf{j}} +\blue{v_z \mathbf{k}})$<br>
+                        <div class='fragment'>
+                        $
+                        \require{cancel}
+                        \begin{split}
+                          &= \red{u_x v_x \mathbf{i} \cdot \mathbf{i}} + \red{u_x} \green{v_y} \cancel{\red{\mathbf{i}} \cdot \green{\mathbf{j}}} + \red{u_x} \blue{v_z} \cancel{\red{\mathbf{i}} \cdot \blue{\mathbf{k}}} \\
+                           &+ \green{u_y} \red{v_x} \cancel{\green{\mathbf{j}} \cdot \red{\mathbf{i}}} + \green{u_y v_y \mathbf{j} \cdot \mathbf{j}} + \green{u_y} \blue{v_z} \cancel{\green{\mathbf{j}} \cdot \blue{\mathbf{k}}} \\
+                           &+ \blue{u_z} \red{v_x} \cancel{\blue{\mathbf{k}} \cdot \red{\mathbf{i}}} + \blue{u_z} \green{v_y} \cancel{\blue{\mathbf{k}} \cdot \green{\mathbf{j}}} + \blue{u_z v_z \mathbf{k} \cdot \mathbf{k}} \\
+                           &= \red{u_x v_x} + \green{u_y v_y} + \blue{u_z v_z}
+                        \end{split}
+                        $
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Lengden av en vektor</h3>
+                        <p>Pythagoras</p>
+                        <div class='container'>
+                            <div class='col'>
+                            $
+                            \begin{align*}
+                            |\vec{u}| &= \sqrt{\vec{u} \cdot \vec{u}}\\
+                                  &= \sqrt{u_x^2 + u_y^2 + u_z^2}
+                            \end{align*}
+                            $
+                            </div>
+                            <div class='col'>
+                            <iframe scrolling="no" title="pythagoras" data-src="https://www.geogebra.org/material/iframe/id/srgvwas3/width/500/height/400/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" src="https://www.geogebra.org/material/iframe/id/srgvwas3/width/500/height/400/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="500px" height="400px" style="border:0px;"> </iframe>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <a href='https://geogebra.org/classic/dnvjedrz' target='_blank'><h4>Geometrisk tolkning $\mathbf{a} \cdot \mathbf{b}$</h4></a>
+                        <iframe scrolling="no" title="Skalarprodukt løsning" data-src="https://www.geogebra.org/material/iframe/id/dnvjedrz/width/600/height/400/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/true/ld/false/sdz/true/ctl/false" width="600px" height="400px" style="border:0px;"> </iframe>
+                        <p>Lengden av <b>a</b> ganger lengden av <b>b</b> i retning av <b>a</b></p>
+                    </section>
+                    <section>
+                        <a href='https://geogebra.org/classic/aedafrfp' target='_blank'><h4>Alternativ geometrisk tolkning $\mathbf{a} \cdot \mathbf{b}$</h4></a>
+                        <iframe scrolling="no" title="Skalarprodukt løsning a på b" data-src="https://www.geogebra.org/material/iframe/id/aedafrfp/width/600/height/400/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="600px" height="400px" style="border:0px;"> </iframe>
+                        <p>Lengden av <b>b</b> ganger lengden av <b>a</b> i retning av <b>b</b></p>
+                    </section>
+
+                    <section>
+                        <a href='https://www.geogebra.org/classic/kvwwgesx' target='_blank'><h3>Likningen for et plan</h3></a>
+                        <div class='container'>
+                            <div class='col'>
+                            Planet til høyre har <b>a</b> som normalvektor.<br>
+                            VC oppgir at likningen for planet er<br>
+                            $\mathbf{r} \cdot \mathbf{a} = \text{konstant}$<br>
+                            Hvorfor?
+                            </div>
+                            <div class='col'>
+                            <iframe scrolling="no" title="likningplan3d" data-src="https://www.geogebra.org/material/iframe/id/kvwwgesx/width/500/height/400/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/true/ld/false/sdz/true/ctl/false" width="500px" height="400px" style="border:0px;"> </iframe>
+                            </div>
+                        </div>
+                        <p class='fragment'>$\mathbf{r} \cdot \mathbf{a}$ er lengden av <b>a</b> ganger lengden av <b>r</b> i retning av <b>a</b> (p i figuren). p er den samme for alle posisjonsvektorer i planet så derfor er $\mathbf{r} \cdot \mathbf{a}$ konstant.</p>
+
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                    <a href='https://geogebra.org/classic/gxu29uvz' target='_blank'><h3>Kryss-produkt</h3></a>
+                    $\vec{w} = \vec{u} \times \vec{v}$<br>
+                    <iframe scrolling="no" title="kryssprodukt" data-src="https://www.geogebra.org/material/iframe/id/gxu29uvz/width/700/height/400/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/true/ld/false/sdz/true/ctl/false" width="700px" height="400px" style="border:0px;"> </iframe>
+                    <br>
+                    $|\vec{w}|=|\vec{u}||\vec{v}|\sin \alpha$
+                    </section>
+
+                    <section>
+                        <a href='https://geogebra.org/classic/fjbfss4e' target='_blank'><h3>Mer om kryss-produkt</h3></a>
+                        <div class='container'>
+                            <div class='col'>
+                            <iframe scrolling="no" title="enhetsvektorer" data-src="https://www.geogebra.org/material/iframe/id/fjbfss4e/width/500/height/400/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="500px" height="400px" style="border:0px;"> </iframe>
+                            </div>
+                            <div class='col'>
+                                Høyrehåndsregel
+                                $
+                        \begin{align*}
+                        \red{\mathbf{i}} \times \green{\mathbf{j}} &= \blue{\mathbf{k}}\\
+                        \blue{\mathbf{k}} \times \red{\mathbf{i}} &= \green{\mathbf{j}}\\
+                        \green{\mathbf{j}} \times \blue{\mathbf{k}} &= \red{\mathbf{i}} \\
+                        \red{{\mathbf{i}}} \times \red{\mathbf{i}} &= 0 \\
+                        \green{{\mathbf{j}}} \times \green{\mathbf{j}} &= 0 \\
+                        \blue{{\mathbf{k}}} \times \blue{\mathbf{k}} &= 0
+                        \end{align*}
+                            $
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>Utledning av kryss-produkt</h3>
+                        <p>
+                        $
+                        \vec{u} \times \vec{v} = (\red{u_x \mathbf{i}} + \green{u_y \mathbf{j}} +\blue{u_z \mathbf{k}}) \times (\red{v_x \mathbf{i}} + \green{v_y \mathbf{j}} +\blue{v_z \mathbf{k}})
+                        $
+                        </p>
+                        <div class='fragment' data-fragment-index='1'>
+                        $
+                        \require{cancel}
+                        \begin{split}
+                          &= \red{u_x v_x \cancel{\mathbf{i} \times \mathbf{i}}} + \red{u_x} \green{v_y} {\red{\mathbf{i}} \times \green{\mathbf{j}}} + \red{u_x} \blue{v_z} \red{\mathbf{i}} \times \blue{\mathbf{k}} \\
+                           &+ \green{u_y} \red{v_x} \green{\mathbf{j}} \times \red{\mathbf{i}} + \green{u_y v_y \cancel{\mathbf{j} \times \mathbf{j}}} + \green{u_y} \blue{v_z} \green{\mathbf{j}} \times \blue{\mathbf{k}} \\
+                           &+ \blue{u_z} \red{v_x} \blue{\mathbf{k}} \times \red{\mathbf{i}} + \blue{u_z} \green{v_y} \blue{\mathbf{k}} \times \green{\mathbf{j}} + \blue{u_z v_z \cancel{\mathbf{k} \times \mathbf{k}}} \\
+
+                        \end{split}
+                        $
+                        </div>
+                        <p class='fragment' data-fragment-index='1'>Bruker at kryss-produktet er distribuert ved addisjon<br>
+                            $\vec{a} \times (\vec{b} + \vec{c}) = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$</p>
+
+                    </section>
+
+                    <section>
+                        <div>
+                        $
+                        \require{cancel}
+                        \begin{split}
+                          &= \red{u_x v_x \cancel{\mathbf{i} \times \mathbf{i}}} + \red{u_x} \green{v_y} {\red{\mathbf{i}} \times \green{\mathbf{j}}} + \red{u_x} \blue{v_z} \red{\mathbf{i}} \times \blue{\mathbf{k}} \\
+                           &+ \green{u_y} \red{v_x} \green{\mathbf{j}} \times \red{\mathbf{i}} + \green{u_y v_y \cancel{\mathbf{j} \times \mathbf{j}}} + \green{u_y} \blue{v_z} \boxed{\green{\mathbf{j}} \times \blue{\mathbf{k}}} \\
+                           &+ \blue{u_z} \red{v_x} \blue{\mathbf{k}} \times \red{\mathbf{i}} + \blue{u_z} \green{v_y} \boxed{\blue{\mathbf{k}} \times \green{\mathbf{j}}} + \blue{u_z v_z \cancel{\mathbf{k} \times \mathbf{k}}} \\
+                        \end{split}
+                        $
+                        </div>
+                        <p></p>
+                        <div class='fragment'>
+                            $
+                            \green{\mathbf{j}} \times \blue{\mathbf{k}} = \red{\mathbf{i}}, \quad \blue{\mathbf{k}} \times \green{\mathbf{j}} = -\red{\mathbf{i}}
+                            $
+                        </div>
+                        <p></p>
+                        <div class='fragment'>
+                           $
+                           \rightarrow (\green{u_y} \blue{v_z} - \blue{u_z} \green{v_y}) \, \red{\mathbf{i}}
+                           $
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <div>
+                        $
+                        \require{cancel}
+                        \begin{split}
+                          &= \red{u_x v_x \cancel{\mathbf{i} \times \mathbf{i}}} + \red{u_x} \green{v_y} {\red{\mathbf{i}} \times \green{\mathbf{j}}} + \red{u_x} \blue{v_z} \boxed{\red{\mathbf{i}} \times \blue{\mathbf{k}}} \\
+                           &+ \green{u_y} \red{v_x} \green{\mathbf{j}} \times \red{\mathbf{i}} + \green{u_y v_y \cancel{\mathbf{j} \times \mathbf{j}}} + \green{u_y} \blue{v_z} {\green{\mathbf{j}} \times \blue{\mathbf{k}}} \\
+                           &+ \blue{u_z} \red{v_x} \boxed{\blue{\mathbf{k}} \times \red{\mathbf{i}}} + \blue{u_z} \green{v_y} {\blue{\mathbf{k}} \times \green{\mathbf{j}}} + \blue{u_z v_z \cancel{\mathbf{k} \times \mathbf{k}}} \\
+                        \end{split}
+                        $
+                        </div>
+                        <p></p>
+                        <div class='fragment'>
+                            $
+                            \red{\mathbf{i}} \times \blue{\mathbf{k}} = \green{\mathbf{j}}, \quad \blue{\mathbf{k}} \times \red{\mathbf{i}} = -\green{\mathbf{j}}
+                            $
+                        </div>
+                        <p></p>
+                        <div class='fragment'>
+                           $
+                           \rightarrow (\red{u_x} \blue{v_z} - \blue{u_z} \red{v_x}) \, \green{\mathbf{j}}
+                           $
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <div>
+                        $
+                        \begin{split}
+                        \vec{u} \times \vec{v}  &= (\green{u_y} \blue{v_z} - \blue{u_z} \green{v_y})\, \red{\mathbf{i}} \\
+                                                &+ (\blue{u_z} \red{v_x} - \red{u_x}\blue{v_z} )\, \green{\mathbf{j}} \\
+                                                &+ (\red{u_x}\green{v_y} - \green{u_y \red{v_x}}) \, \blue{\mathbf{k}}
+                        \end{split}
+                        $
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <h3>Huskeregel</h3>
+                        <h4>Ta determinanten av følgende matrise</h4>
+                        $
+                        \begin{align*}
+                            \vec{u} \times \vec{v} &= \begin{vmatrix} \red{\mathbf{i}} & \green{\mathbf{j}} & \blue{\mathbf{k}} \\
+                                                                     \red{u_x} & \green{u_y} & \blue{u_z} \\
+                                                                     \red{v_x} & \green{v_y} & \blue{v_z} \end{vmatrix} \\
+                                                   &= (\green{u_y} \blue{v_z} - \blue{u_z} \green{v_y})\, \red{\mathbf{i}} \\
+                                                   &+ (\blue{u_z} \red{v_x} - \red{u_x} \blue{v_z} )\, \green{\mathbf{j}} \\
+                                                   &+ (\red{u_x} \green{v_y} - \green{u_y} \red{v_x})\, \blue{\mathbf{k}}
+                        \end{align*}
+                        $
+                    </section>
+
+                    <section>
+                        <a href='https://www.geogebra.org/classic/qnrypjg5' target='_blank'>
+                            <h3>Normalvektor til plan</h3>
+                        </a>
+                        <p>To vilkårlige vektorer i $\mathbb{R}^3$ spenner ut et plan</p>
+                        <iframe scrolling="no" title="Plan fra vektorer" data-src="https://www.geogebra.org/material/iframe/id/qnrypjg5/width/800/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/true/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="800px" height="500px" style="border:0px;"> </iframe>
+
+                    </section>
+
+                    <section>
+                        <h3>Sammendrag av forrige slide</h3>
+                        <ul>
+                        <li class='fragment'>To vektorer $\vec{u}$ og $\vec{v}$ i $\mathbb{R}^3$ spenner ut et plan</li>
+                        <li class='fragment'>Kryssproduktet gir en ny vektor $\vec{a}$ med retning normal til planet<br>
+                         <center>$\vec{a} = \vec{u} \times \vec{v}$</center></li>
+                        <li class='fragment'>En enhetsvektor $\vec{n}_a$ med lengde 1 og samme retning som $\vec{a}$ skapes med<br>
+                         <center>$\vec{n}_a = \frac{\vec{a}}{|\vec{a}|}$</center></li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+                <section>
+                <h3>Derivasjon av vektorer</h3>
+                <p>Også komponentvis</p>
+                $
+                \begin{split}
+                \frac{d \vec{u}}{dt} &= \frac{d}{dt}\left(\red{u_x \mathbf{i}} + \green{u_y \mathbf{j}} +\blue{u_z \mathbf{k}} \right) \\
+                                     &= \frac{d \red{u_x}}{dt} \red{\mathbf{i}} + \frac{d \green{u_y}}{dt} \green{\mathbf{j}} + \frac{d \blue{u_z}}{dt} \blue{\mathbf{k}}
+                \end{split}
+                $
+                <p>Siden enhetsvektorene er <u>uavhengige av tid</u>!</p>
+                </section>
+
+                <section>
+                    <a href='https://www.geogebra.org/classic/gnnkn7dw' target='_blank'>
+                        <h3>Liten repetisjon av derivasjon</h3>
+                    </a>
+                    $f'(x)=\frac{d f(x)}{dx}  \underset{\Delta x \to 0}{\approx} \frac{f(x+\Delta x) - f(x)}{\Delta x}$
+
+                    <p></p>
+                    <iframe scrolling="no" title="Derivasjon av funksjon" data-src="https://www.geogebra.org/material/iframe/id/gnnkn7dw/width/800/height/400/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/true/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="800px" height="400px" style="border:0px;"> </iframe>
+
+                </section>
+
+                <section>
+                    <a href='https://www.geogebra.org/classic/aammuceg' target='_blank'>
+                        <h4>Derivasjon av posisjonsvektor</h4>
+                    </a>
+                    $\vec{v} = \frac{d \vec{r}(t)}{dt}  \underset{\Delta t \to 0}{\approx} \frac{\vec{r}(t+\Delta t) - \vec{r}(t)}{\Delta t}$
+                    <p></p>
+                    <iframe scrolling="no" title="Derivasjon av posisjonsvektor" data-src="https://www.geogebra.org/material/iframe/id/aammuceg/width/800/height/400/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/true/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="800px" height="400px" style="border:0px;"> </iframe>
+                </section>
+
+                </section>
+
+                <section>
+                    <h3>Øvingsoppgaver i Geogebra</h3>
+                    <a href='https://geogebra.org/groups'>https://geogebra.org/groups</a>
+                    <p>Bruk koden <font color='red'>Y8D23</font></p>
+                </section>
+
+            <!--section>
+                <h3>Python</h3>
+                <div id="sagecell"><script type="text/x-sage">
+import numpy as np
+print(np.zeros(5))
+                </script>
+                </div>
+            </!--section-->
+
+            <!--section style='position:static;'>
+                <h3>Import numpy</h3>
+
+                <div class='sagecell-sage'>
+                    <script type='text/x-sage'>
+import numpy as np
+print(np.zeros(4))
+                    </script>
+                </div>
+
+            </!--section-->
+
+        </div>
+
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/math/math.js"></script>
+            <script>
+              Reveal.initialize({
+                hash: true,
+                math: {
+                  mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+                  config: 'TeX-AMS_HTML-full',
+                  // pass other options into `MathJax.Hub.Config()`
+                  TeX: { Macros: {
+                        red: ['\\color{red}{#1}', 1],
+                        green: ['\\color{green}{#1}', 1],
+                        blue: ['\\color{blue}{#1}', 1],
+                        RR: "{\\bf R}"
+                        }
+                      }
+                },
+                plugins: [ RevealMath ]
+              });
+            </script>
+
+	</body>
+</html>

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduksjon til MEK1100</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<!--div class="topbar">
+					<image class="logo" src="figs/UiO_Segl_150dpi.png" width='80' style="float:left; background:none; border:none; box-shadow:none;">
+				</!--div-->
+
+				<section>
+					<h3>Velkommen til</h3>
+                    <h3>MEK1100 - Feltteori og Vektoranalyse</h3>
+                    <h4>Våren 2021</h4>
+                    <p>Foreleser: Mikael Mortensen (mikaem@math.uio.no)</p>
+                    <p>Gruppelærere:   </p>
+
+				</section>
+
+				<!--section data-background=white>
+					<p>https://folk.uio.no/mikaem</p>
+					<iframe width=1000 height=500 webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" src="https://folk.uio.no/mikaem" data-src="https://folk.uio.no/mikaem"></iframe>
+				</!--section-->
+
+				<!--section>
+					<h3> MEK1100 - litt praktisk informasjon </h3>
+					<ul>
+  						<li class='fragment'>Gruppearbeid - 7 åpne grupper. Finn selv en gruppe du vil være med i, men prøv å fordele utover</li>
+  						<li class='fragment'>Mye oppgaveregning - ukesoppgaver legges ut på hjemmesiden</li>
+  						<li class='fragment'>Jeg trenger tillitsstudenter</li>
+  						<li class='fragment'>To obligatoriske oppgaver + midtveiseksamen</li>
+					</ul>
+				</!--section-->
+
+				<section>
+					<h4>MEK1100 - litt praktisk informasjon</h4>
+
+					<iframe width=1000 height=500 webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" src="https://www.uio.no/studier/emner/matnat/math/MEK1100/v21/index.html" data-src="https://www.uio.no/studier/emner/matnat/math/MEK1100/v21/index.html"></iframe>
+
+					<!--aside class='notes'>
+						<ul>
+							<li class='fragment'>Gruppearbeid - 7 åpne grupper. Finn selv en gruppe du vil være med i, men prøv å fordele utover</li>
+							<li class='fragment'>Mye oppgaveregning - ukesoppgaver legges ut på hjemmesiden</li>
+							<li class='fragment'>Jeg trenger tillitsstudenter</li>
+							<li class='fragment'>To obligatoriske oppgaver + midtveiseksamen</li>
+					  </ul>
+					</aside-->
+				</section>
+
+				<!--section>
+					<h4>Mange med forskjellig bakgrunn tar MEK1100</h4>
+
+					<iframe width=1000 height=500 webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" src="https://www.mentimeter.com/s/1b40bf3035817e10a1b8f9c41e1af201/fa16f5392d26" data-src="https://www.mentimeter.com/s/1b40bf3035817e10a1b8f9c41e1af201/fa16f5392d26"></iframe>
+
+				</section-->
+
+				<section>
+					<h4>Mekanikk brukes om mye forskjellig</h4>
+					<iframe width=1000 height=500 webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" src="https://www.mentimeter.com/s/594e1c38face8bbd2583b72cecbc0237/3f88b350126b" data-src="https://www.mentimeter.com/s/594e1c38face8bbd2583b72cecbc0237/3f88b350126b"></iframe>
+				</section>
+
+				<section>
+					<h4><span style='color:red'>MEK</span>1100 – Feltteori og vektoranalyse</h4>
+					<p><span style='color:red'>Mekanikk</span> i MEK1100</p>
+					<ul>
+					    <li>Læren om bevegelse og om krefter som kan forårsake bevegelse </li>
+						<li class='fragment'>Klassisk Newtonsk fysikk: $\boxed{m \vec{a} = \sum Krefter}$ </li>
+						<li class='fragment'>Kontinuumsmekanikk!</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+					<h4>MEK1100 – <span style='color:blue'>Felt</span>teori og <span style='color:blue'>vektor</span>analyse</h4>
+					<p>I MEK1100 vil det være mye snakk om skalarfelt og vektorfelt</p>
+					</section>
+
+					<section>
+					<p style='float: left'>Fra P.C. Matthews kapittel 1:</p>
+					<ul>
+						<li class='fragment' data-fragment-index='1'>En skalar er noe som kun har størrelse og som dermed kan beskrives med ett tall</li>
+						<li class='fragment' data-fragment-index='2'>En vektor er noe som har både størrelse og retning. En vektor i rommet er beskrevet av like mange tall som det er dimensjoner.</li>
+					</ul>
+					</section>
+					<section>
+					<p style='float: left'>Fra P.C. Matthews kapittel 1:</p>
+						<ul>
+							<li class='fragment' data-fragment-index='1'>Et felt er noe (en fysisk mengde) som avhenger av posisjon</li>
+							<ul>
+							<li class='fragment' data-fragment-index='2'>Et skalarfelt er dermed noe hvis størrelse avhenger av posisjon</li>
+							<li class='fragment' data-fragment-index='2'>Et vektorfelt er noe hvis størrelse og retning avhenger av posisjon</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+					<h3>Skalarfelt</h3>
+					<div class='container'>
+						<div class='col'>
+							<p style='float: left'>For eksempel:</p>
+					    <ul>
+					        <li>Temperatur</li>
+							<li>Trykk</li>
+							<li>Fart</li>
+					        <li>Nedbørsmengde</li>
+						</ul>
+						</div>
+						<div class='col'>
+							<img data-src='figs/trykk.png' width='400'>
+							<p>Konturplott for trykk</p>
+						</div>
+					</div>
+					</section>
+					<section>
+					<h3>Vektorfelt</h3>
+					<div class='container'>
+					<div class='col'>
+						<p style='float: left'>For eksempel:</p>
+					<ul>
+					    <li>Hastighet på fluid</li>
+						<li>Magnetfelt</li>
+						<li>Elektrisk felt</li>
+						<li>Gravitasjonsfelt</li>
+					</ul>
+					</div>
+					<div class='col'>
+						<img data-src='figs/trykk_og_vector.png' width='400'>
+						<p>Konturplott trykk med hastighetsvektorer</p>
+					</div>
+					</div>
+					</section>
+					<section>
+					<h4>Andre måter å presentere det samme</h4>
+					<div class='container'>
+						<div class='col'>
+							<img data-src='figs/contours_og_vektor.png' width='300'>
+							<p>Konturlinjer av trykk med vektorer</p>
+						</div>
+						<div class='col'>
+							<img data-src='figs/elevated.png' width='300'>
+							<p>Hevet konturplott for trykk med vektorer</p>
+						</div>
+						<div class='col'>
+							<img data-src='figs/stream2.png' width='300'>
+							<p>Konturer av strømlinjer farget av trykk</p>
+						</div>
+					</div>
+					</section>
+				</section>
+
+				<section>
+					<section>
+					<h3>I MEK1100 skal vi lære om</h3>
+					<p>Fundamentale grunnstener for likningene som beskriver den synlige delen av naturen rundt oss</p>
+					</section>
+
+					<section>
+					<h3>Modellering</h3>
+					<ul>
+						<li class='fragment'>Hvordan bruke feltteori for å beskrive fluider</li>
+						<li class='fragment'>Visulisering av felter (programmeringsverktøy)</li>
+						<li class='fragment'>Data-analyse - I oblig 2 skal vi analysere data fra laboratoriet til fluidmekanikk seksjonen</li>
+						<li class='fragment'>Demonstrasjonsforsøk</li>
+						<li class='fragment'>Numerisk beregning av felt</li>
+					</ul>
+					</section>
+					<section>
+					<h3>Matematikk</h3>
+					<h4>En praktisk anvendelse av MAT1110</h4>
+					<ul>
+						<li class='fragment'>Partielle deriverte og differensiallikninger</li>
+						<li class='fragment'>Linje-, flate- og volumintegraler</li>
+						<li class='fragment'>Gradienter av felter $\nabla \beta(x,y,z)$</li>
+						<li class='fragment'>Divergens av felter $\nabla \cdot \vec{u}(x, y, z)$</li>
+						<li class='fragment'>Kryss-produkter $\vec{a} \times \vec{b}$</li>
+						<li class='fragment'>Virvling (curl) $\nabla \times \vec{u}$</li>
+					</ul>
+					</section>
+
+					<section>
+				    	<h2>For eksempel turbulens</h2>
+						<img data-src="https://cdn.jsdelivr.net/gh/spectralDNS/spectralutilities@master/movies/isotropic300_12.gif" width="600" height="400" alt="Isotropic turbulence"/>
+					</section>
+					<section>
+						<img data-src="https://cdn.jsdelivr.net/gh/spectralDNS/spectralutilities@master/movies/isotropic300_12.gif" width="450" height="300" alt="Isotropic turbulence"/>
+
+						<h4>Beskrevet av Navier-Stokes likningene</h4>
+
+						\[\begin{align*}
+						  \frac{\partial \vec{u}}{\partial t} + \nabla \cdot \vec{u} \vec{u} &= -\frac{1}{\rho}\nabla p + \nu \nabla^2 \vec{u} \\
+						  \nabla \cdot \vec{u} &= 0
+						\end{align*}
+						\]
+					</section>
+					<section>
+						<img data-src="https://cdn.jsdelivr.net/gh/spectralDNS/spectralutilities@master/movies/isotropic300_12.gif" width="300" height="200" alt="Isotropic turbulence"/>
+
+						<!--h4>Navier Stokes</!h4-->
+
+						<span style='zoom: 0.7;'>
+						\[
+						\begin{align*}
+						  \color{green}{\frac{\partial \vec{u}}{\partial t}} + \color{magenta}{\nabla \cdot \vec{u} \vec{u}} &= -\frac{1}{\rho}\color{red}{\nabla p} + \color{gray}{\nu \nabla^2 \vec{u}} \\
+						  \color{blue}{\nabla \cdot \vec{u}} &= 0
+						\end{align*}
+						\]
+						</span>
+
+						<div class='container' style='zoom: 0.65;'>
+						    <div class='col'>
+						      <ul>
+						          <li>$\color{green}{\frac{\partial \vec{u}}{\partial t}}\text{ - Partiell tidsderivert}$</li>
+						          <li>$\color{blue}{\nabla \cdot \vec{u}} \text{ - Divergens av vektor}$</li>
+						          <li>$\color{red}{\nabla p} \text{ - Gradient av skalar}$</li>
+						      </ul>
+						     </div>
+						    <div class='col'>
+						        <ul>
+						            <li>$\color{magenta}{\nabla \cdot \vec{u} \vec{u}}\text{ - Divergens av ytre produkt}$ <br /> $\text{mellom to vektorer}$</li>
+						            <li>$\color{gray}{\nu \nabla^2 \vec{u}\left(= \nu\nabla \cdot \nabla \vec{u} \right)}\text{ - Divergens av}$ <br /> $\text{gradient av vektor}$</li>
+						        </ul>
+						    </div>
+						</div>
+
+					</section>
+
+					<section>
+						<h3>Eller Rayleigh-Bénard konveksjon</h3>
+						<img data-src="https://cdn.jsdelivr.net/gh/spectralDNS/spectralutilities@master/movies/RB_200k_small.png" width="600" height="400" alt="Rayleigh-Bénard flow"/>
+						<p>Temperatur mellom to plater som holdes ved forskjellig temperatur</p>
+					</section>
+					<section>
+						<img data-src="https://cdn.jsdelivr.net/gh/spectralDNS/spectralutilities@master/movies/RB_200k_small.png" width="450" height="300" alt="Isotropic turbulence"/></center>
+
+						<h4>Navier Stokes + temperatur</h4>
+
+						<span style="zoom: 0.7;">
+						\[\begin{align*}
+						  \frac{\partial \vec{u}}{\partial t} + \nabla \cdot \vec{u}\vec{u} &= -\frac{1}{\rho}\nabla p + \nu \nabla^2 \vec{u} + T \mathbf{k} \\
+						  \nabla \cdot \vec{u} &= 0 \\
+						  \frac{\partial T}{\partial t} + \vec{u}\cdot \nabla T &= \kappa \nabla^2 T
+						\end{align*}\]
+						</span>
+					</section>
+
+					<section>
+						<h3>For spesielt interesserte</h3>
+						<p>Alle simuleringene over er gjort på supercomputere med Python-baserte koder</p>
+						<p><a href='https://github.com/spectralDNS' target='_blank'>
+							github.com/spectralDNS
+						</a></p>
+						<img data-src='figs/kaust_computer.jpg' width='50%'>
+
+					</section>
+				</section>
+
+				<section>
+					<section data-background=white>
+					<h3>Programmeringsverktøy</h3>
+
+					<div class='container'>
+					  <div class='col' style='float:center;'>
+					      <a href='https://geogebra.com'><img data-src='figs/Geogebra-logo.png' style='background:none; border:none; box-shadow:none;'></a>
+					      <a href='https://se.mathworks.com/products/matlab.html'><img data-src='figs/Matlab_Logo.png' width='80%' style='background:none; border:none; box-shadow:none;'></a>
+					  </div>
+					  <div class='col' style='float:center;'>
+					      <a href='https://python.org'><img data-src='figs/Python_logo_wordmark.png' width='80%' style='background:none; border:none; box-shadow:none;'></a>
+					      <a href='https://jupyter.org'><img data-src='figs/jupyter_logo.png' style='background:none; border:none; box-shadow:none;'></a>
+					  </div>
+					</div>
+					</section>
+
+					<!--section>
+						<h3>Programmeringsverktøy</h3>
+						<iframe width=1000 height=500 webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" src="https://www.mentimeter.com/s/ac98a2aab2aee39d4367c4d01b79d691/3e3955748569" data-src="https://www.mentimeter.com/s/ac98a2aab2aee39d4367c4d01b79d691/3e3955748569"></iframe>
+					</section-->
+
+				</section>
+				<!--section>
+					<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' data-src='https://www.mentimeter.com/s/d73fd8e91b00be16ec66ec3e7ed7aa20/2258518fb09f' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+				</section-->
+
+				<section>
+					<a href='https://jupyterhub.uio.no' target='_blank'>https://jupyterhub.uio.no</a>
+
+				</section>
+
+				<!--section>
+					<h3>Spørsmål?</h3>
+					<iframe width=1000 height=500 webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" src="https://www.mentimeter.com/s/c384e92f9387239f9e9595b6acf5b91d/4f62781e49a4" data-src="https://www.mentimeter.com/s/c384e92f9387239f9e9595b6acf5b91d/4f62781e49a4"></iframe>
+				</section-->
+
+
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+            <script>
+              Reveal.initialize({
+				hash: true,
+                math: {
+                  mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+                  config: 'TeX-AMS_HTML-full',
+                  // pass other options into `MathJax.Hub.Config()`
+                  TeX: { Macros: {
+                        red: ['\\color{red}{#1}', 1],
+                        green: ['\\color{green}{#1}', 1],
+                        blue: ['\\color{blue}{#1}', 1],
+                        RR: "{\\bf R}"
+                        }
+                      }
+                },
+                plugins: [ RevealMath, RevealNotes ]
+              });
+            </script>
+
+	</body>
+</html>

@@ -1,0 +1,227 @@
+/*.sagecell-sage {
+  position: fixed;
+  top: 20%;
+  min-width: 100% !important;
+}
+*/
+.grid-container {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  padding: 1px;
+}
+
+.grid-item {
+  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+  padding: 1px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-container div {
+  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+  padding: 1px;
+  font-size: 30px;
+  text-align: center;
+  width: 400px;
+  height: 280px;
+}
+
+.grid-container21 {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto 500px;
+  padding: 30px;
+}
+
+.grid-item3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.sagecell-sage pre {
+  box-shadow: none;
+}
+
+.reveal pre {
+  box-shadow: none;
+}
+
+.sagecell_commands, .sagecell .ui-widget .sagecell_commands {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0px solid !important;
+  font-family: monospace !important;
+  font-size: 20pt !important;
+}
+
+
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+}
+.col{
+    flex: 1 ;
+    /*-webkit-flex: 1; /* Safari 6.1+ */
+    /*-ms-flex: 1; /* IE 10 */
+}
+.twocolumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  text-align: left;
+}
+
+a:hover {
+  -webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+
+img:hover {
+  animation: flash 1.5s;
+  -webkit-animation: flash 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 45.0%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.topleft {
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.bottomleft {
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+
+.bottomright {
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+.frame
+{
+    width: 1200px;
+    height: 500px;
+    border: 0;
+
+    -ms-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+table, tr, td {
+    border: none;
+}
+
+.noBorder {
+    border:none !important;
+    text-align-last: right;
+}
+
+.alignleft {
+  border:none !important;
+  background:none !important;
+  text-align-last: left;
+  zoom: 0.7;
+}
+
+.iframe-container {
+    width: 1200px;
+    height: 500px;
+    border: 0;
+
+    -ms-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
